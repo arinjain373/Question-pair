@@ -46,7 +46,7 @@ def apply_stemming_and_lemmatization(sentence):
 
 def test_fetch_token_features(q1, q2):
     SAFE_DIV = 0.0001
-    STOP_WORDS = stopwords.words("english")
+    STOP_WORDS = pickle.load(open('stopwords.pkl','rb'))
     token_features = [0.0] * 8
 
     q1_tokens = q1.split()
