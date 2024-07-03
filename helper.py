@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import distance
 import pickle
 import numpy as np
+import zipfile
 
 import nltk
 from nltk.stem import PorterStemmer, WordNetLemmatizer
@@ -17,7 +18,15 @@ nltk.download('stopwords')
 stemmer = PorterStemmer()
 lemmatizer = WordNetLemmatizer()
 
-cv = pickle.load(open('cv.pkl', 'rb'))
+zip_file_path = 'cv.zip'
+cv_file_name = 'cv.pkl'
+
+with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
+    if cv_file_name in zip_ref.namelist():
+        zip_ref.extract(cv_file_name)
+
+with open(cv_file_name, 'rb') as file:
+    cv = pickle.load(file)
 
 
 def test_common_words(q1, q2):
