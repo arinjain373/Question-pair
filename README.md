@@ -30,6 +30,7 @@ This project aims to detect duplicate questions using a machine learning approac
 - q2_num_words: The number of words in the second question.
 - word_common: The total number of common words between the two questions.
 - word_total: The total number of unique words across both questions.
+- word_share: The ratio of common words to the total number of unique words across both questions.
 
 
 Try Here :
