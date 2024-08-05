@@ -3,6 +3,8 @@ import helper
 import pickle
 from joblib import dump, load
 import zipfile
+import nltk
+nltk.download('punkt')
 
 # Path to the zip file
 zip_file_path = 'model.zip'
