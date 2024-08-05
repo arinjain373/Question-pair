@@ -9,7 +9,7 @@ import nltk
 from nltk.stem import PorterStemmer, WordNetLemmatizer
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
-
+nltk.download('punkt')
 
 
 stemmer = PorterStemmer()
