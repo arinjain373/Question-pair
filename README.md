@@ -33,5 +33,3 @@ This project aims to detect duplicate questions using a machine learning approac
 - word_share: The ratio of common words to the total number of unique words across both questions.
 
 
-Try Here :
-https://quora-question-pair.streamlit.app/
